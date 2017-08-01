@@ -1,5 +1,7 @@
 # Resources
 
+[Bitcoin Developer Guide](https://bitcoin.org/en/developer-reference)
+
 [Ethereum Whitepaper](https://github.com/ethereum/wiki/wiki/White-Paper)
 
 [Solidity Documentation](https://solidity.readthedocs.io/en/latest/)
