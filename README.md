@@ -18,3 +18,9 @@ EOS, IOTA
 
 ZCash\(zk-SNARKs\), Monero
 
+crypto-economics
+
+BIP, EIP
+
+light client
+
