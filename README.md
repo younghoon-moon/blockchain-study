@@ -1,3 +1,20 @@
-# My Awesome Book
+# Stuffs to Learn - Brainstorming
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+sidechain, drivechain
+
+lightning network
+
+sharding
+
+proof of stake
+
+merkle tree, patricia tree
+
+GHOST protocol
+
+solidity, viper
+
+EOS, IOTA
+
+ZCash\(zk-SNARKs\), Monero
+

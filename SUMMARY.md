@@ -1,3 +1,6 @@
 # Summary
 
-* [First Chapter](chapter1.md)
+* [Brainstorming](README.md)
+* [Sharding](chapter1.md)
+* [Resources](resources.md)
+
