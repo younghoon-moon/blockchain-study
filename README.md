@@ -24,6 +24,8 @@ GHOST protocol
 
 solidity, viper
 
+EVM
+
 EOS, IOTA
 
 bitcoin-NG
