@@ -6,7 +6,19 @@
 
 샤딩은 블록체인의 상태\(state\)를 "샤드\(shard\)"라 불리는 k개의 구획\(partition\)으로 나눈다. 기본적인 형태의 샤딩의 경우 각 샤드\(shard\)는 각자의 거래내역을 지니며 샤드에서 이루어지는 거래의 효과는 해당 샤드 내로 제한된다. 좀 더 복잡한 형태의 샤딩의 경우에는 샤드간 통신\(cross-shard communication\)을 통해 하나의 샤드에서의 거래가 다른 샤드의 상태를 변화시킬 수 있다.
 
-Collator라 불리는 노드는 특정 샤드 A 내의 거래를 인정하고 collation을 생산한다. Collation은 collation header를 포함하는데 이는 "샤드 A 내에서 일어나는 거래의 collation이다"라는 메세지이다. 이전 state root 값과 해당 collation의 거래의 merkle root 값, 그 거래들을 처리한 후 상태의 state root 값을 명시한다. 
+Collator라 불리는 노드는 특정 샤드 A 내의 거래를 인정하고 collation을 생산한다. Collation은 collation header를 포함하는데 이는 "샤드 A 내에서 일어나는 거래의 collation이다"라는 메세지이다. 이전 state root 값과 해당 collation의 거래의 merkle root 값, 그 거래들을 처리한 후 상태의 state root 값을 명시한다.
+
+블록은 각 샤드에 대한 collation header를 포함해야 하며 다음의 조건을 만족시키는 경우에만 유효\(valid\)하다.
+
+* 각 collation에 포함된 pre-state root가 해당 샤드의 현재 state root와 일치\(match\)한다
+* 모든 collation의 모든 거래들이 유효\(valid\)하다
+* Collation의 post-state root가 주어진 pre-state root를 갖는 상태에 거래를 적용한 후의 결과값과 일치한다
+* Collation이 해당 샤드에 등록된 collator들의 2/3 이상에 의해 서명된다
+
+이 때 다음과 같은 다양한 수준\(level\)의 노드들이 존재한다
+
+* 슈퍼-풀 노드\(super-full node\): 모든 collation의 거래를 처리하며 모든 샤드에 대한 상태를 저장 및 유지
+* Top-lev
 
 ### Reference
 
