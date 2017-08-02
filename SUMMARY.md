@@ -1,6 +1,6 @@
 # Summary
 
 * [Brainstorming](README.md)
-* [Sharding](chapter1.md)
+* [샤딩\(Sharding\)](chapter1.md)
 * [Resources](resources.md)
 

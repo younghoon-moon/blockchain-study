@@ -1,4 +1,4 @@
-Sharding
+# 샤딩\(Sharding\)
 
 현재 대부분의 개방형\(public\) 블록체인은 모든 노드\(node\)가 모든 상태\(state\)를 저장하고 모든 거래\(transaction\)을 처리하는 높은 중복성을 지닌다. 이러한 중복성으로 인해 현재의 블록체인은 높은 수준의 보안을 제공할 수 있는 반면 확장성\(scalability\)에 제한이 있다 \(e.g. 비트코인은 초당 3-5개, 이더리움은 7-15개의 거래 처리 가능\).
 
@@ -17,9 +17,10 @@ Collator라 불리는 노드는 특정 샤드 A 내의 거래를 인정하고 co
 
 이 때 다음과 같은 다양한 수준\(level\)의 노드들이 존재한다
 
-* Super-full node: 모든 collation의 거래를 처리하며 모든 샤드에 대한 상태를 저장 및 유지
-* Top-level node: 모든 상위 수준\(top-level\) 블록을 처리하지만 각 collation 내의 거래를 처리 혹은 저장하지 않음. 해당 샤드의 collators의 2/3 이상이 서명하면 이를 유효한 것으로 받아들인다
-* Single-shard node: top-level node로 활동하면서 특정 샤드의 모든 거래를 처리하며 샤드의 상태를 저장 및 유지한다 
+* **Super-full node**: 모든 collation의 거래를 처리하며 모든 샤드에 대한 상태를 저장 및 유지
+* **Top-level node**: 모든 상위 수준\(top-level\) 블록을 처리하지만 각 collation 내의 거래를 처리 혹은 저장하지 않음. 해당 샤드의 collators의 2/3 이상이 서명하면 이를 유효한 것으로 받아들인다
+* **Single-shard node**: top-level node로 활동하면서 특정 샤드의 모든 거래를 처리하며 샤드의 상태를 저장 및 유지한다
+* **Light node**: 상위 수준 블록의 블록헤더\(block header\)만을 저장 및 검증하며 특정 샤드 내의 내용을 읽어야 하는 경우가 아니면 collation header나 거래를 처리하지 않음. 필요한 내용이 있을 경우에는 가장 최근의 collation header에 대한 merkle branch를 다운받아 해당 내용의 merkle proof를 다운받는다.
 
 ### Reference
 
