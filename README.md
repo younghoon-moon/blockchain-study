@@ -10,6 +10,10 @@ lightning network
 
 sharding
 
+merge mining
+
+selfish mining
+
 segwit
 
 proof of stake
@@ -31,4 +35,6 @@ crypto-economics
 BIP, EIP
 
 light client
+
+BFT & consensus
 
