@@ -28,7 +28,7 @@ EVM
 
 EOS, IOTA
 
-bitcoin-NG
+Bitcoin-NG
 
 ZCash\(zk-SNARKs\), Monero
 
