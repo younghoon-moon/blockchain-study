@@ -17,8 +17,9 @@ Collator라 불리는 노드는 특정 샤드 A 내의 거래를 인정하고 co
 
 이 때 다음과 같은 다양한 수준\(level\)의 노드들이 존재한다
 
-* 슈퍼-풀 노드\(super-full node\): 모든 collation의 거래를 처리하며 모든 샤드에 대한 상태를 저장 및 유지
-* Top-lev
+* Super-full node: 모든 collation의 거래를 처리하며 모든 샤드에 대한 상태를 저장 및 유지
+* Top-level node: 모든 상위 수준\(top-level\) 블록을 처리하지만 각 collation 내의 거래를 처리 혹은 저장하지 않음. 해당 샤드의 collators의 2/3 이상이 서명하면 이를 유효한 것으로 받아들인다
+* Single-shard node: top-level node로 활동하면서 특정 샤드의 모든 거래를 처리하며 샤드의 상태를 저장 및 유지한다 
 
 ### Reference
 
