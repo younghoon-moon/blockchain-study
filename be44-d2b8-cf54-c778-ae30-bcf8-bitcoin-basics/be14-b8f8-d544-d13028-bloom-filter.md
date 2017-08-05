@@ -1,4 +1,8 @@
 ### 블룸필터\(Bloom Filter\)
 
-블룸필터는 확률적 검색 필터로서 찾는 정보가 무엇인지 정확히 명시하지 않고도 원하는 패턴을 찾는 방법으로서 사생활을 보호하면서도 원하는 정보를 찾을 수 있도록 도와준다. 블룸필터는 SPV 노드에 의해 
+블룸필터는 확률적 검색 필터로서 찾는 정보가 무엇인지 정확히 명시하지 않고도 원하는 패턴을 찾는 방법으로서 사생활을 보호하면서도 원하는 정보를 찾을 수 있도록 도와준다. 블룸필터는 SPV 노드에 의해
+
+#### Reference
+
+[Chapter 8. Mastering Bitcoin \(2nd Ed.\) by Andreas Antonopoulos](https://github.com/bitcoinbook/bitcoinbook/blob/second_edition/ch08.asciidoc)
 
