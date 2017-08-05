@@ -10,9 +10,7 @@ lightning network
 
 sharding
 
-merge mining
-
-selfish mining
+merge mining, selfish mining
 
 segwit
 
