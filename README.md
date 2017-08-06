@@ -4,6 +4,8 @@ bitcoin basics
 
 ethereum basics
 
+consensus algorithm - PoW, PoS, Tendermint, Honeybadger, etc. 
+
 sidechain, drivechain
 
 lightning network
