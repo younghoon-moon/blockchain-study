@@ -10,3 +10,5 @@ Block Size vs. Block Weight
 
 [Understanding SegWit Block Size by Jimmy Song](https://medium.com/@jimmysong/understanding-segwit-block-size-fd901b87c9d4)
 
+[BIP141](https://github.com/bitcoin/bips/blob/master/bip-0141.mediawiki)
+
