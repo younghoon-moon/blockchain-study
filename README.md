@@ -4,7 +4,7 @@ bitcoin basics
 
 ethereum basics
 
-consensus algorithm - PoW, PoS, Tendermint, Honeybadger, etc. 
+consensus algorithm - PoW, PoS, Tendermint, Honeybadger, etc.
 
 sidechain, drivechain
 
@@ -32,7 +32,7 @@ EOS, IOTA
 
 Bitcoin-NG
 
-ZCash\(zk-SNARKs\), Monero
+privacy coins - ZCash\(zk-SNARKs\), Monero, confidential transactions, miblewimble, coinjoin, tumblebits
 
 crypto-economics
 
