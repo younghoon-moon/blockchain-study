@@ -8,5 +8,5 @@ Block Size vs. Block Weight
 
 #### Reference
 
-[Understanding Segwit Block Size by Jimmy Song](https://medium.com/@jimmysong/understanding-segwit-block-size-fd901b87c9d4)
+[Understanding SegWit Block Size by Jimmy Song](https://medium.com/@jimmysong/understanding-segwit-block-size-fd901b87c9d4)
 
