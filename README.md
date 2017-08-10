@@ -8,6 +8,8 @@ consensus algorithm - PoW, PoS, Tendermint, Honeybadger, etc.
 
 sidechain, drivechain
 
+state channel
+
 lightning network
 
 sharding
@@ -41,4 +43,8 @@ BIP, EIP
 light client
 
 BFT & consensus
+
+erasure coding
+
+
 
