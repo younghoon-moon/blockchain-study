@@ -6,11 +6,12 @@
   * [블룸필터\(Bloom Filter\)](be44-d2b8-cf54-c778-ae30-bcf8-bitcoin-basics/be14-b8f8-d544-d13028-bloom-filter.md)
   * [세그윗\(SegWit: Segregated Witness\)](be44-d2b8-cf54-c778-ae30-bcf8-bitcoin-basics/c138-adf8-c71728-segwit-segregated-witness.md)
 * [하드포크\(Hard Fork\)와 소프트포크\(Soft Fork\)](d558-b4dc-d3ec-d06c28-hard-fork-c640-c18c-d504-d2b8-d3ec-d06c28-soft-fork.md)
-* [샤딩\(Sharding\)](chapter1.md)
 * [암호경제학\(Cryptoeconomics\)](c554-d638-acbd-c81c-d55928-cryptoeconomics.md)
-* [라이트닝 네트워크\(Lightning Network\)](b77c-c774-d2b8-b2dd-b124-d2b8-c6cc-d06c28-lightning-network.md)
-* [플라즈마\(Plasma\)](d50c-b77c-c988-b9c828-plasma.md)
+* [확장성 해결책 \| Scalability Solution](d655-c7a5-c131-scalability.md)
+  * [샤딩\(Sharding\)](chapter1.md)
+  * [라이트닝 네트워크\(Lightning Network\)](b77c-c774-d2b8-b2dd-b124-d2b8-c6cc-d06c28-lightning-network.md)
+  * [플라즈마\(Plasma\)](d50c-b77c-c988-b9c828-plasma.md)
 * [블로그 글 정리](ae00.md)
   * [The Triangle of Harm](ae00/the-triangle-of-harm.md)
-* [Resources](resources.md)
+* 확장성 \| Scalability
 
