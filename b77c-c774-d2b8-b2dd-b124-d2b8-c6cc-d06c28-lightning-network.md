@@ -46,9 +46,11 @@
 
 ##### **3.3.1. 특정 거래를 블록체인에 공개한 당사자 파악**
 
-라이트닝 네트워크에서 모든 Commitment Transaction은 각각의 거래 당사자에 의해 **반만 서명된\(half-signed\) 거래의 쌍**\(2개\)으로 이루어져있다. 예를 들어 철수가 서명한 Commitment Transaction은 영희가 보관하고 영희는 언제든지 이에 자신의 서명을 덧붙여 블록체인 상에 공개할 수 있다. 반대로 영희가 서명한 거래는 철수가 보관하고 철수 또한 언제든지 자신의 서명을 덧붙여 이를 블록체인 상에 공개할 수 있다. 따라서 특정 Commitment Transaction이 블록체인 상에 공개된 경우 철수와 영희 중 누가 거래를 공개하였는지 파악할 수 있게 되며 이는 결제채널에서 계약을 어기는\(i.e. 최신이 아닌 Commitment Transaction을 블록체인 상에 공개하는\) 참가자를 식별하고 그들에게 벌금을 부과하는 데 사용된다. 
+라이트닝 네트워크에서 모든 Commitment Transaction은 각각의 거래 당사자에 의해 **반만 서명된\(half-signed\) 거래의 쌍**\(2개\)으로 이루어져있다. 예를 들어 철수가 서명한 Commitment Transaction은 영희가 보관하고 영희는 언제든지 이에 자신의 서명을 덧붙여 블록체인 상에 공개할 수 있다. 반대로 영희가 서명한 거래는 철수가 보관하고 철수 또한 언제든지 자신의 서명을 덧붙여 이를 블록체인 상에 공개할 수 있다. 따라서 특정 Commitment Transaction이 블록체인 상에 공개된 경우 철수와 영희 중 누가 거래를 공개하였는지 파악할 수 있게 되며 이는 결제채널에서 계약을 어기는\(i.e. 최신이 아닌 Commitment Transaction을 블록체인 상에 공개하는\) 참가자를 식별하고 그들에게 벌금을 부과하는 데 사용된다.
 
-##### 3.3.2. 취소 가능한 거래 생성
+##### 3.3.2. 취소 가능한 거래\(Revocable Transaction\)의 생성
+
+Revocable Sequence Maturity Contract \(RSMC\)
 
 
 
@@ -56,7 +58,7 @@
 
 OP CHECKSEQUENCEVERIFY
 
-**Revocable Sequence Maturity Contract \(RSMC\)**는 특정 기간 이후\(e.g. 1,000 확인confirmations\)에 실행될 수 있지만 그 전에는 취소\(revoke\)될 수 있는 계약을 말하며
+는 특정 기간 이후\(e.g. 1,000 확인confirmations\)에 실행될 수 있지만 그 전에는 취소\(revoke\)될 수 있는 계약을 말하며
 
 ### Reference
 
