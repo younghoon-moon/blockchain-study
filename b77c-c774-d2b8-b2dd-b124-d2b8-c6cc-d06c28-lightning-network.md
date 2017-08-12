@@ -2,7 +2,7 @@
 
 ### 0. 개요
 
-라이트닝 네트워크는 [Joseph Poon](https://twitter.com/jcp)과 [Thaddeus Dryja](https://www.linkedin.com/in/thaddeus-dryja-29620b53/)에 의해 2015년 처음 소개되었으며 이후 비트코인을 비롯한 블록체인 시스템의 확장성 문제를 해결해줄 수 있는 솔루션으로 많은 각광을 받았다. 
+[라이트닝 네트워크\(Lightning Network\)](https://lightning.network/)는 [Joseph Poon](https://twitter.com/jcp)과 [Thaddeus Dryja](https://www.linkedin.com/in/thaddeus-dryja-29620b53/)에 의해 2015년 처음 소개되었으며 이후 비트코인을 비롯한 블록체인 시스템의 확장성 문제를 해결해줄 수 있는 솔루션으로 많은 각광을 받았다.
 
 ### 1. 비트코인의 확장성\(scalability\) 문제
 
@@ -21,8 +21,8 @@
 철수와 영희가 결제채널\(payment channel\)을 만드는 기본적인 절차는 다음과 같다.
 
 1. **Funding Transaction 생성**. 철수와 영희는 각자 일정량\(e.g. 철수는 3BTC를 영희는 2BTC를 보낸다고 가정하자\)의 비트코인\(BTC\)을 입력값\(input\)으로 보내는 Funding Transaction을 생성한다. 이 때 Funding Transaction의 출력값\(output\)은 2-of-2 다중서명\(multi-sig\) 스크립트로서 철수와 영희의 서명이 모두 있어야 Funding Transaction의 자금을 사용할 수 있다. 이 때 철수와 영희는 Funding Transaction에 대한 서명을 교환하지 않는데 그 이유는 서명을 교환하는 경우 Funding Transaction을 네트워크에 통보\(broadcast\)함으로써 블록체인에 기록할 수 있기 때문이다. 이렇게 되면 철수와 영희 둘 중 한 명이라도 나쁜 마음을 먹는 경우 자금을 계속 묶어두거나 묶인 자금을 인질\(hostage\)로 삼아 돈을 요구할 수 있다. 
-2. **Commitment Transaction의 생성**. 이후 철수와 영희는 각자가 원래 Funding Transaction에 지불했던 비트코인을 자신에게 환불\(refund\)하는\(e.g. 철수에게 3BTC, 영희에게 2BTC을 주는\) Commitment Transaction을 생성한다. Commitment Transaction의 입력값은 1에서 만들어진 Funding Transaction의 거래 ID\("txid"\)값이 들어갈 것이다.
-3. **Commitment Transaction에 서명**. 철수와 영희는 Commitment Transaction에 서명을 한다. 이 때 위의 1에서 Funding Transaction에 서명이 되지 않았기 때문에Commitment Transaction은 입력값\(input\)의 "txid" 필드가 정해지지 않았다. 따라서 철수와 영희 모두 입력값에 서명을 할 수 없다. 이 경우 라이트닝 네트워크는 입력값에 서명하지 않는 SIGHASH\_NOINPUT 플래그\(flag\)를 사용하여 서명을 생성하도록 한다.
+2. **Commitment Transaction의 생성**. 이후 철수와 영희는 각자가 원래 Funding Transaction에 지불했던 비트코인을 자신에게 환불\(refund\)하는\(e.g. 철수에게 3BTC, 영희에게 2BTC을 주는\) Commitment Transaction을 생성한다. Commitment Transaction의 입력값은 1에서 만들어진 Funding Transaction의 거래 ID\(`txid`\)값이 들어갈 것이다.
+3. **Commitment Transaction에 서명**. 철수와 영희는 Commitment Transaction에 서명을 한다. 이 때 위의 1에서 Funding Transaction에 서명이 되지 않았기 때문에 Commitment Transaction은 입력값\(input\)의 `txid` 필드가 정해지지 않았다. 따라서 철수와 영희 모두 입력값에 서명을 할 수 없다. 이 경우 라이트닝 네트워크는 입력값에 서명하지 않는 `SIGHASH_NOINPUT` 플래그\(flag\)를 사용하여 서명을 생성하도록 한다.
 4. **Commitment Transaction 서명 교환**. 철수와 영희는 3에서 Commitment Transaction에 대한 서명을 교환한다.
 5. **Funding Transaction에 서명**. Commitment Transaction에 대한 서명의 교환이 완료되면 철수와 영희는 각각 Funding Transaction에 서명한다.
 6. **Funding Transaction 서명 교환**. 철수와 영희는 5의 Funding Transaction에 대한 서명을 교환한다.
@@ -36,8 +36,11 @@
 
 하지만 여기서 문제가 발생하는데 새로운 Commitment Transaction 뿐만 아니라 이전의 Commitment Transaction도 여전히 네트워크 상에 공개되어 블록체인에 기록될 수 있기 때문이다. 즉 어떠한 Commitment Transaction이 유효한 것인지에 대한 우선순위가 없는 것이 문제이다. 따라서 철수의 경우 이전의 Commitment Transaction을 블록체인에 공개하여 0.5BTC을 되돌려받는 것이 경제적으로 유리하기 때문에 결제채널은 작동하지 않게 된다. 블록체인 같은 경우는 모든 거래들이 블록체인에 기록되어 거래의 순서가 비가역적으로 정해지지만 블록체인 외부에서는 이러한 비가역성이 존재하지 않기 때문에 다른 방식으로 최신 거래의 유효성을 확립해야 한다.
 
-라이트닝 네트워크는 블록체인 외부에서 최신 거래의 유효성을 확립하기 위해 
+라이트닝 네트워크는 블록체인 외부에서 최신 거래의 유효성을 확립하기 위해 다음과 같이 크게 세 가지의 도구를 사용한다.
 
+* 같은 내용의 거래를 **서명 순서를 달리하여** Commitment Transaction 한 쌍\(2개\)을 만들어 철수와 영희 중 누가 거래를 블록체인에 공개했는지 파악. 백서\(whitepaper\)에서는 이를 "누구 탓인가\(ascribing blame\)"라고 표현하고 있다.
+* 거래를 일정기간 동안 유효하지 않도록 하는 **타임락\(timelock\)** 기능을 사용하여 **취소할 수 있는 거래\(revocable transactions\)**를 생성하고 이를 통한 블록체인을 통한 분쟁해결\(dispute resolution\)
+* 
 누굴 탓할까\(ascribing blame\)
 
 OP CHECKSEQUENCEVERIFY
