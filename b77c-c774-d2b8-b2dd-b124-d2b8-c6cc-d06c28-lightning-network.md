@@ -24,11 +24,11 @@
 6. **Funding Transaction 서명 교환**. 철수와 영희는 5의 Funding Transaction에 대한 서명을 교환한다.
 7. **Funding Transaction을 블록체인 상에 공개**. 이젠 철수와 영희는 자금동결의 우려없이 Funding Transaction을 블록체인 상에 공개할 수 있다. 철수와 영희 모두 Commitment Transaction에 서명했기 때문에 마음만 먹으면 언제든지 상대방의 동의없이 Commitment Transaction을 블록체인 상에 공개함으로써 초기에 투입하였던 자금을 환불받을 수 있기 때문이다.
 
-위의 7단계를 거쳐 Funding Transaction이 블록체인에 기록되게 되면 철수와 영희간의 결제채널이 성립된 것이다. 이 때 Commitment Transaction은 블록체인에 공개되지 않으며 
+위의 7단계를 거쳐 Funding Transaction이 블록체인에 기록되게 되면 철수와 영희간의 결제채널이 성립된 것이다. 이 때 Commitment Transaction은 블록체인에 공개되지 않는다. 
 
 
 
-철수와 영희는 최초 채널 Funding Transaction에 대한 입력값\(input\)과 출력값\(output\)을 생성하지만 거래에 서명은 하지 않은 상태. Funding Transaction의 출력값은 2-of-2 다중서명 스크립트. 철수와 영희는 2-of-2 출력값에서 원래 금액을 자신들에게 환불하는 거래를 생성하기 전까지 첫 번째 Funding Transaction에 대한 서명을 교환하지 않는다.  거래에 서명을 하지 않는 이유는
+
 
 누굴 탓할까\(ascribing blame\)
 
