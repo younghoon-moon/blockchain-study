@@ -34,14 +34,19 @@
 
 철수와 영희는 개설된 결제채널을 바탕으로 블록체인 바깥에서 장부를 업데이트해 나간다고 가정하자. 라이트닝 네트워크는 장부가 업데이트 될때마다 새로운 Commitment Transaction을 생성하여 장부를 업데이트한다. 예를 들어 철수와 영희가 Commitment Transaction을 통해 각각 3BTC, 2BTC을 보유하고 있는 상황에서 철수가 영희에게 0.5BTC을 지불한다고 하자. 철수와 영희에게 각자에게 2.5BTC씩 지불하는 새로운 Commitment Transaction을 생성하고 이에 서명한 후 서명을 교환한다. 새로운 Commitment Transaction 또한 블록체인 상에 공개되지 않고 거래 당사자들만 보관한다.
 
-하지만 여기서 문제가 발생하는데 새로운 Commitment Transaction 뿐만 아니라 이전의 Commitment Transaction도 여전히 네트워크 상에 공개되어 블록체인에 기록될 수 있기 때문이다. 즉 어떠한 Commitment Transaction이 유효한 것인지에 대한 우선순위가 없는 것이 문제이다. 따라서 철수의 경우 이전의 Commitment Transaction을 블록체인에 공개하여 0.5BTC을 되돌려받는 것이 경제적으로 유리하기 때문에 결제채널은 작동하지 않게 된다. 블록체인 같은 경우는 모든 거래들이 블록체인에 기록되어 거래의 순서가 비가역적으로 정해지지만 블록체인 외부에서는 이러한 비가역성이 존재하지 않기 때문에 다른 방식으로 최신 거래의 유효성을 확립해야 한다.
+하지만 여기서 문제가 발생하는데 새로운 Commitment Transaction 뿐만 아니라 이전의 Commitment Transaction도 여전히 네트워크 상에 공개되어 블록체인에 기록될 수 있기 때문이다. 즉 **어떠한 Commitment Transaction이 유효한 것인지에 대한 우선순위가 없는 것**이 문제이다. 따라서 철수의 경우 이전의 Commitment Transaction을 블록체인에 공개하여 0.5BTC을 되돌려받는 것이 경제적으로 유리하기 때문에 결제채널은 작동하지 않게 된다. 블록체인 같은 경우는 모든 거래들이 블록체인에 기록되어 거래의 순서가 비가역적으로 정해지지만 블록체인 외부에서는 이러한 비가역성이 존재하지 않기 때문에 다른 방식으로 최신 거래의 유효성을 확립해야 한다.
 
 라이트닝 네트워크는 블록체인 외부에서 최신 거래의 유효성을 확립하기 위해 다음과 같이 크게 세 가지의 도구를 사용한다.
 
-* 같은 내용의 거래를 **서명 순서를 달리하여** Commitment Transaction 한 쌍\(2개\)을 만들어 철수와 영희 중 누가 거래를 블록체인에 공개했는지 파악. 백서\(whitepaper\)에서는 이를 "누구 탓인가\(ascribing blame\)"라고 표현하고 있다.
+* 같은 내용의 거래를 **서명 순서를 달리하여** Commitment Transaction 한 쌍\(2개\)을 만들어 **특정 거래를 블록체인에 공개한 당사자를 파악**. 백서\(whitepaper\)에서는 이를 "**누구 탓인가\(ascribing blame\)**"라고 표현하고 있다.
 * 거래를 일정기간 동안 유효하지 않도록 하는 **타임락\(timelock\)** 기능을 사용하여 **취소할 수 있는 거래\(revocable transactions\)**를 생성하고 이를 통한 블록체인을 통한 분쟁해결\(dispute resolution\)
-* 
-누굴 탓할까\(ascribing blame\)
+* Breach Remedy Transaction을 통해 계약을 어기는 거래 참가자의 예치금을 몰수하는 방식으로 **벌금\(penalty\)**을 부과
+
+#### 3.3. 블록체인 외부\(off blockchain\)에서 최신 거래의 유효성 확립
+
+
+
+
 
 OP CHECKSEQUENCEVERIFY
 
