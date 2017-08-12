@@ -8,9 +8,13 @@ consensus algorithm - PoW, PoS, Tendermint, Honeybadger, etc.
 
 sidechain, drivechain
 
+tree chains \(Peter Todd\)
+
 state channel
 
 lightning network
+
+plasma
 
 sharding
 
@@ -40,11 +44,11 @@ crypto-economics
 
 BIP, EIP
 
-light client
+SPV, light client
 
 BFT & consensus
 
 erasure coding
 
-
+inter-blockchain \(polkadot, tendermint, omisego\)
 
