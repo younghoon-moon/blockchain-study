@@ -8,30 +8,25 @@
 
 ### 2. 라이트닝 네트워크\(Lightning Network\)란?
 
-라이트닝 네트워크\(Lightning Network\)는 이러한 비트코인의 확장성에 대한 문제의식에서 출발하였다. 비트코인이 비자\(Visa\)와 같이 초당 47,000개 이상의 거래를 처리하기 위해서는 비트코인 블록체인 바깥에서\(off-chain\) 거래가 이루어질 수 있도록 하는 시스템이 필요하며 이와 더불어 매우 낮은 수수료의 소액거래\(micropayment\)를 거의 무제한으로 처리할 수 있는 시스템이 있다면 더 좋을 것이다. 라이트닝 네트워크란 **블록체인의 바깥에서 대량의 소액결제\(micropayment\)를 즉시\(instant\) 처리할 수 있는 분산화 시스템**이다.
+라이트닝 네트워크\(Lightning Network\)는 비트코인 확장성 문제에 대한 해결책으로 제시되었으며** 블록체인 바깥에서\(off-chain\) 결제채널\(payment channels\)의 네트워크**를 통해 낮은 수수료로 다량의 소액거래\(micropayment\)를 처리할 수 있도록 시스템이다. 블록체인 바깥에서 이루어지지만 실제로 이루어지는 모든 거래는 유효한 비트코인 거래로서 중간 관리인\(custodian\) 없이 안전하게 거래를 성사시킬 수 있다.
 
 ### 3. 라이트닝 네트워크의 작동원리
 
-라이트닝 네트워크는 결제채널\(payment channel\)을 사용하여 . 두 명의 거래 당사자는 일정량의 비트코인을 다중서명\(multi-sig\) 거래에 보낸다. 양측의 동의가 있을 경우에만 현재 잔고\(balance\)는
+#### 3.1. 결제채널의 생성
 
-철수와 영희가 거래채널을 만든다고 하면 다음의 절차를 거치게 된다.
+철수와 영희가 결제채널\(payment channel\)을 만든다고 하면 다음의 절차를 거치게 된다.
 
-1. 철수와 영희는 각각으로부터 특정량의 BTC를 입력값\(input\)으로 하고 철수와 영희 둘 모두의 서명을 사용해야 unlock 할 수 있는 2-of-2 다중서명\(multi-sig\) 스크립트를 출력값\(outpu\)으로 하는 Funding Transaction을 생성한다. 이 때 철수와 영희는 Funding Transaction에 대한 자신들의 서명을 서로 교환하지 않는다. 
-2. 철수와 영희는 처음에 넣은 BTC를 각자에게 환불\(refund\)하는 최초의 Commitment Transaction을 생성. 이 때 SIGHASH\_NOINPUT
+1. **Funding Transaction 생성**. 철수와 영희는 각자 일정량의 비트코인\(BTC\)을 입력값\(input\)으로 보내는 Funding Transaction을 생성한다. 이 때 Funding Transaction의 출력값\(output\)은 2-of-2 다중서명\(multi-sig\) 스크립트로서 철수와 영희의 서명이 모두 있어야 spend 할 수 있다. 
+2. 고 를 출력값\(output\)으로 하는 Funding Transaction을 생성한다. 이 때 철수와 영희는 Funding Transaction에 대한 서명을 서로 교환하지 않는다. 
+3. 철수와 영희는 처음에 넣은 BTC를 각자에게 환불\(refund\)하는 최초의 Commitment Transaction을 생성. 이 때 SIGHASH\_NOINPUT
 
 철수와 영희는 최초 채널 Funding Transaction에 대한 입력값\(input\)과 출력값\(output\)을 생성하지만 거래에 서명은 하지 않은 상태. Funding Transaction의 출력값은 2-of-2 다중서명 스크립트. 철수와 영희는 2-of-2 출력값에서 원래 금액을 자신들에게 환불하는 거래를 생성하기 전까지 첫 번째 Funding Transaction에 대한 서명을 교환하지 않는다.  거래에 서명을 하지 않는 이유는
 
-누굴 탓할까\(ascribing blame\) 
+누굴 탓할까\(ascribing blame\)
 
 OP CHECKSEQUENCEVERIFY
 
 **Revocable Sequence Maturity Contract \(RSMC\)**는 특정 기간 이후\(e.g. 1,000 확인confirmations\)에 실행될 수 있지만 그 전에는 취소\(revoke\)될 수 있는 계약을 말하며
-
-
-
-
-
-
 
 ### Reference
 
