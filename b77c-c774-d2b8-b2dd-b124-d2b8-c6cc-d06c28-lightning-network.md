@@ -16,9 +16,17 @@
 
 철수와 영희가 결제채널\(payment channel\)을 만든다고 하면 다음의 절차를 거치게 된다.
 
-1. **Funding Transaction 생성**. 철수와 영희는 각자 일정량의 비트코인\(BTC\)을 입력값\(input\)으로 보내는 Funding Transaction을 생성한다. 이 때 Funding Transaction의 출력값\(output\)은 2-of-2 다중서명\(multi-sig\) 스크립트로서 철수와 영희의 서명이 모두 있어야 spend 할 수 있다. 
-2. 고 를 출력값\(output\)으로 하는 Funding Transaction을 생성한다. 이 때 철수와 영희는 Funding Transaction에 대한 서명을 서로 교환하지 않는다. 
-3. 철수와 영희는 처음에 넣은 BTC를 각자에게 환불\(refund\)하는 최초의 Commitment Transaction을 생성. 이 때 SIGHASH\_NOINPUT
+1. **Funding Transaction 생성**. 철수와 영희는 각자 일정량\(e.g. 철수는 3BTC를 영희는 2BTC를 보낸다고 가정하자\)의 비트코인\(BTC\)을 입력값\(input\)으로 보내는 Funding Transaction을 생성한다. 이 때 Funding Transaction의 출력값\(output\)은 2-of-2 다중서명\(multi-sig\) 스크립트로서 철수와 영희의 서명이 모두 있어야 Funding Transaction의 자금을 사용할 수 있다. 이 때 철수와 영희는 Funding Transaction에 대한 서명을 교환하지 않는데 그 이유는 서명을 교환하는 경우 Funding Transaction을 네트워크에 통보\(broadcast\)함으로써 블록체인에 기록할 수 있기 때문이다. 이렇게 되면 철수와 영희 둘 중 한 명이라도 나쁜 마음을 먹는 경우 자금을 계속 묶어두거나 묶인 자금을 인질\(hostage\)로 삼아 돈을 요구할 수 있다. 
+2. **Commitment Transaction의 생성**. 이후 철수와 영희는 각자가 원래 Funding Transaction에 지불했던 비트코인을 자신에게 환불\(refund\)하는\(e.g. 철수에게 3BTC, 영희에게 2BTC을 주는\) Commitment Transaction을 생성한다. Commitment Transaction의 입력값은 1에서 만들어진 Funding Transaction의 거래 ID\("txid"\)값이 들어갈 것이다.
+3. **Commitment Transaction에 서명**. 철수와 영희는 Commitment Transaction에 서명을 한다. 이 때 위의 1에서 Funding Transaction에 서명이 되지 않았기 때문에Commitment Transaction은 입력값\(input\)의 "txid" 필드가 정해지지 않았다. 따라서 철수와 영희 모두 입력값에 서명을 할 수 없다. 이 경우 라이트닝 네트워크는 입력값에 서명하지 않는 SIGHASH\_NOINPUT 플래그\(flag\)를 사용하여 서명을 생성하도록 한다.
+4. **Commitment Transaction 서명 교환**. 철수와 영희는 3에서 Commitment Transaction에 대한 서명을 교환한다.
+5. **Funding Transaction에 서명**. Commitment Transaction에 대한 서명의 교환이 완료되면 철수와 영희는 각각 Funding Transaction에 서명한다.
+6. **Funding Transaction 서명 교환**. 철수와 영희는 5의 Funding Transaction에 대한 서명을 교환한다.
+7. **Funding Transaction을 블록체인 상에 공개**. 이젠 철수와 영희는 자금동결의 우려없이 Funding Transaction을 블록체인 상에 공개할 수 있다. 철수와 영희 모두 Commitment Transaction에 서명했기 때문에 마음만 먹으면 언제든지 상대방의 동의없이 Commitment Transaction을 블록체인 상에 공개함으로써 초기에 투입하였던 자금을 환불받을 수 있기 때문이다.
+
+위의 7단계를 거쳐 Funding Transaction이 블록체인에 기록되게 되면 철수와 영희간의 결제채널이 성립된 것이다. 이 때 Commitment Transaction은 블록체인에 공개되지 않으며 
+
+
 
 철수와 영희는 최초 채널 Funding Transaction에 대한 입력값\(input\)과 출력값\(output\)을 생성하지만 거래에 서명은 하지 않은 상태. Funding Transaction의 출력값은 2-of-2 다중서명 스크립트. 철수와 영희는 2-of-2 출력값에서 원래 금액을 자신들에게 환불하는 거래를 생성하기 전까지 첫 번째 Funding Transaction에 대한 서명을 교환하지 않는다.  거래에 서명을 하지 않는 이유는
 
