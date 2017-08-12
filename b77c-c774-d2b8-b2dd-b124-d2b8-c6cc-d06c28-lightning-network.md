@@ -44,9 +44,13 @@
 
 #### 3.3. 블록체인 외부\(off blockchain\)에서 최신 거래의 유효성 확립
 
+##### 3.3.1. 특정 거래를 블록체인에 공개한 당사자 파악
 
+라이트닝 네트워크에서 모든 Commitment Transaction은 거래 당사자 1명에 의해서 반만 서명된\(half-signed\) 거래의 쌍\(2개\)으로 이루어져있다. 예를 들어 철수가 Commitment Transaction에 서명하고 이를 영희가 보관하며 필요시 블록체인 상에 공개한다. 마찬가지로 영희가 서명한 Commitment Transaction은 철수가 보관하고 철수만이 블록체인 상에 이를 공개할 수 있다. 
 
+##### 3.3.2. 취소 가능한 거래 생성
 
+##### 3.3.3. 벌금의 부과
 
 OP CHECKSEQUENCEVERIFY
 
