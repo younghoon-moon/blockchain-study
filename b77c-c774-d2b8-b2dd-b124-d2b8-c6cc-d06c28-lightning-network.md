@@ -26,11 +26,11 @@
 
 위의 7단계를 거쳐 Funding Transaction이 블록체인에 기록되게 되면 철수와 영희간의 결제채널이 성립된 것이다. 이 때 Commitment Transaction은 블록체인에 공개되지 않으며 거래 당사자간의 현재 잔고\(current balance\)를 나타내는데 사용된다. 철수와 영희는 Commitment Transaction을 블록체인 상에 공개함으로써 자신의 잔고를 환불받고 결제채널을 닫을 수 있다.
 
-#### 3.2. 장부 업데이트의 문제
+#### 3.2. 블록체인 바깥\(off blockchain\)에서의 장부 업데이트 문제
 
-철수와 영희는 개설된 결제채널을 바탕으로 블록체인 바깥에서 장부를 업데이트해 나간다고 가정하자. 예를 들어 철수가 영희에게 0.5BTC을 지불한다고 하자. 현재 Commitment Transaction에 따르면 철수는 3BTC을 영희는 2BTC을 보유하고 있다. 블록체인 바깥에서 장부를 업데이트하기 위해 철수와 영희는 철수와 영희에게 각자에게 2.5BTC씩 지불하는 새로운 Commitment Transaction을 생성하고 이에 서명한 후 서명을 교환한다. 새로운 Commitment Transaction 또한 블록체인 상에 공개되지 않고 거래 당사자들만 보관한다. 하지만 여기서 문제가 발생하는데 철수는 새로운 Commitment Transaction보다 이전의 Commitment Transaction을 블록체인에 공개할 경제적 유인이 크기 때문이다. 따라서 라이트닝 네트워크는 장부를 업데이트시켜나갈 때마다 새로운 Commitment Transaction을 생성하게 되는데 이전에 생성되었던 Commitment Transaction들도 계속 유효하기 때문에 새로운 업데이트가 효력을 발휘하지 못하게 된다. 
+철수와 영희는 개설된 결제채널을 바탕으로 블록체인 바깥에서 장부를 업데이트해 나간다고 가정하자. 라이트닝 네트워크는 장부가 업데이트 될때마다 새로운 Commitment Transaction을 생성하여 장부를 업데이트한다. 예를 들어 철수와 영희가 Commitment Transaction을 통해 각각 3BTC, 2BTC을 보유하고 있는 상황에서 철수가 영희에게 0.5BTC을 지불한다고 하자. 철수와 영희에게 각자에게 2.5BTC씩 지불하는 새로운 Commitment Transaction을 생성하고 이에 서명한 후 서명을 교환한다. 새로운 Commitment Transaction 또한 블록체인 상에 공개되지 않고 거래 당사자들만 보관한다. 
 
-
+하지만 여기서 문제가 발생하는데 새로운 Commitment Transaction 뿐만 아니라 이전의 Commitment Transaction도 여전히 네트워크 상에 공개되어 블록체인에 기록될 수 있기 때문이다. 즉 어떠한 Commitment Transaction이 유효한 것인지에 대한 우선순위가 없는 것이 문제이다. 따라서 철수의 경우 이전의 Commitment Transaction을 블록체인에 공개하여 0.5BTC을 되돌려받는 것이 경제적으로 유리하기 때문에 결제채널은 작동하지 않게 된다. 블록체인 같은 경우는 모든 거래들이 블록체인에 기록되어 거래의 순서가 비가역적으로 정해지지만 블록체인 외부에서는 이러한 비가역성이 존재하지 않기 때문에 다른 방식으로 거래의 유효성을 확립해야 한다. 
 
 누굴 탓할까\(ascribing blame\)
 
