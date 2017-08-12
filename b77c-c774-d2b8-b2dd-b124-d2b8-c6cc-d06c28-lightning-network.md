@@ -12,5 +12,32 @@
 
 ### 3. 라이트닝 네트워크의 작동원리
 
-라이트닝 네트워크는 결제채널\(payment channel\)을 사용하여 . 두 명의 거래 당사자는 일정량의 비트코인을 다중서명\(multi-sig\) 거래에 보낸다. 양측의 동의가 있을 경우에만 현재 잔고\(balance\)는 
+라이트닝 네트워크는 결제채널\(payment channel\)을 사용하여 . 두 명의 거래 당사자는 일정량의 비트코인을 다중서명\(multi-sig\) 거래에 보낸다. 양측의 동의가 있을 경우에만 현재 잔고\(balance\)는
+
+철수와 영희가 거래채널을 만든다고 하면 다음의 절차를 거치게 된다.
+
+1. 철수와 영희는 각각으로부터 특정량의 BTC를 입력값\(input\)으로 하고 철수와 영희 둘 모두의 서명을 사용해야 unlock 할 수 있는 2-of-2 다중서명\(multi-sig\) 스크립트를 출력값\(outpu\)으로 하는 Funding Transaction을 생성한다. 이 때 철수와 영희는 Funding Transaction에 대한 자신들의 서명을 서로 교환하지 않는다. 
+2. 철수와 영희는 처음에 넣은 BTC를 각자에게 환불\(refund\)하는 최초의 Commitment Transaction을 생성. 이 때 SIGHASH\_NOINPUT
+
+철수와 영희는 최초 채널 Funding Transaction에 대한 입력값\(input\)과 출력값\(output\)을 생성하지만 거래에 서명은 하지 않은 상태. Funding Transaction의 출력값은 2-of-2 다중서명 스크립트. 철수와 영희는 2-of-2 출력값에서 원래 금액을 자신들에게 환불하는 거래를 생성하기 전까지 첫 번째 Funding Transaction에 대한 서명을 교환하지 않는다.  거래에 서명을 하지 않는 이유는
+
+누굴 탓할까\(ascribing blame\) 
+
+OP CHECKSEQUENCEVERIFY
+
+**Revocable Sequence Maturity Contract \(RSMC\)**는 특정 기간 이후\(e.g. 1,000 확인confirmations\)에 실행될 수 있지만 그 전에는 취소\(revoke\)될 수 있는 계약을 말하며
+
+
+
+
+
+
+
+### Reference
+
+[“The Bitcoin Lightning Network”: Paper \(PDF\) DRAFT Version 0.5.9.1](https://lightning.network/lightning-network-paper.pdf)
+
+[SF Bitcoin Devs Seminar: Scaling Bitcoin to Billions of Transactions Per Day](https://www.youtube.com/watch?v=8zVzw912wPo&t=20m15s)
+
+[EB80 – Joseph Poon & Tadge Dryja: Scalability And The Lightning Network](https://www.youtube.com/watch?v=fBS_ieDwQ9k)
 
