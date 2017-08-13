@@ -14,6 +14,6 @@
   * [플라즈마\(Plasma\)](d50c-b77c-c988-b9c828-plasma.md)
 * [블로그 글 정리](ae00.md)
   * [The Triangle of Harm](ae00/the-triangle-of-harm.md)
-* 확장성 \| Scalability
+* [확장성 \| Scalability](d655-c7a5-c131-scalability.md)
 * [솔리디티 \| Solidity](c194-b9ac-b514-d2f0-solidity.md)
 

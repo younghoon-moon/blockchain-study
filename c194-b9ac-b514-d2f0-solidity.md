@@ -1,4 +1,4 @@
-References
+# References
 
 **Beginner's Guide: Smart Contracts by Vlad Wulf**
 
@@ -14,5 +14,16 @@ References
 
 **OpenZeppelin**
 
-https://openzeppelin.org/ 
+[https://openzeppelin.org/](https://openzeppelin.org/)
+
+**Blockgeeks - Introduction to Solidity: Vlad Wulf**
+
+[https://www.youtube.com/watch?v=YH86vgjd7Zs](https://www.youtube.com/watch?v=YH86vgjd7Zs)
+
+**Ethereum Contract Security Techniques and Tips**
+
+https://github.com/ConsenSys/smart-contract-best-practices
+
+**Ethereum Development Tutorial**  
+https://github.com/ethereum/wiki/wiki/Ethereum-Development-Tutorial
 
