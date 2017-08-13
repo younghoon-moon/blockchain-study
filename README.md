@@ -26,7 +26,9 @@ proof of stake
 
 merkle tree, patricia tree
 
-GHOST protocol
+GHOST protocols
+
+swarm, IPFS, MIT Enigma
 
 solidity, viper
 
