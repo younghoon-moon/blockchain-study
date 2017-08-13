@@ -18,6 +18,8 @@ plasma
 
 sharding
 
+truebit \(https://truebit.io/\) 
+
 merge mining, selfish mining
 
 segwit
