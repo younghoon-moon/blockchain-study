@@ -42,7 +42,7 @@
 * 거래를 일정기간 동안 유효하지 않도록 하는 **타임락\(timelock\)** 기능을 사용하여 **취소할 수 있는 거래\(revocable transactions\)**를 생성하고 이를 통해 블록체인 상에서 분쟁을 해결\(dispute resolution\)한다. 
 * Breach Remedy Transaction을 통해 계약을 어기는 거래 참가자의 예치금을 몰수하는 방식으로 **벌금\(penalty\)**을 부과한다. 
 
-#### 3.3. 블록체인 외부\(off blockchain\)에서 최신 거래의 유효성 확립
+#### 3.3. 블록체인 외부\(off blockchain\)에서 최신 장부상태에 대한 유효성\(validity\) 확립
 
 ##### **3.3.1. 특정 거래를 블록체인에 공개한 당사자 파악**
 
@@ -56,13 +56,13 @@ Revocable Sequence Maturity Contract \(RSMC\)
 
 특정기간\(e.g. 1,000번의 확인confirmation\) 후부터 유효한 거래 생성\(revocable output balance\)
 
-
-
 ##### 3.3.3. 벌금의 부과
 
 라이트닝 네트워크는 최신이 아닌 Commitment Transaction을 네트워크에 전파\(broadcast\)하는 참가자의 예치금을 몰수함으로써 최신이 아닌 Commitment Transaction들을 무효화\(invalidate\)한다.
 
 #### 3.4. 
+
+![](/assets/Screen Shot 2017-08-13 at 3.12.43 AM.png)
 
 ### Reference
 

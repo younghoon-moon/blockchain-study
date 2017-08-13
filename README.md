@@ -4,7 +4,7 @@ bitcoin basics
 
 ethereum basics
 
-consensus algorithm - PoW, PoS, Tendermint, Honeybadger, etc.
+consensus algorithm - PoW, PoS, Tendermint, RAFT, PBFT, Honeybadger, etc.
 
 sidechain, drivechain
 
@@ -50,5 +50,5 @@ BFT & consensus
 
 erasure coding
 
-inter-blockchain \(polkadot, tendermint, omisego\)
+inter-blockchain \(polkadot, tendermint, cosmos, omisego\)
 
