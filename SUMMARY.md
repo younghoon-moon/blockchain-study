@@ -15,4 +15,5 @@
 * [블로그 글 정리](ae00.md)
   * [The Triangle of Harm](ae00/the-triangle-of-harm.md)
 * 확장성 \| Scalability
+* [솔리디티 \| Solidity](c194-b9ac-b514-d2f0-solidity.md)
 
