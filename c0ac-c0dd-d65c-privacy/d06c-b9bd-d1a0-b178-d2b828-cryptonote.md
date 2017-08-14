@@ -19,7 +19,12 @@
 2. 영희는 무작위\(random\)로 $$r ∈ [1,l−1]$$을 생성한 후 일회성 공개키\(one-time public key\) $$P = H_s(rA)G+B$$를 계산한다.
 3. 철수는 P를 목표키\(destination key\)로 사용하여 \([디피 헬만 키 교환](https://ko.wikipedia.org/wiki/디피-헬만_키_교환)의 일부로서\) $$R = rG$$를 거래에 포함시킨다.![](/assets/Screen Shot 2017-08-15 at 2.17.31 AM.png)
 4. 철수는 거래를 전송한다.
-5. 
+5. 영희는 모든 거래를   
+
+
+
+
+
 #### 일회성 링 시그니처\(One-time Ring Signatures\)
 
 ### Reference
