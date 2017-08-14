@@ -12,8 +12,9 @@
   * [샤딩\(Sharding\)](chapter1.md)
   * [라이트닝 네트워크\(Lightning Network\)](b77c-c774-d2b8-b2dd-b124-d2b8-c6cc-d06c28-lightning-network.md)
   * [플라즈마\(Plasma\)](d50c-b77c-c988-b9c828-plasma.md)
+* [사생활 \| Privacy](c0ac-c0dd-d65c-privacy.md)
+  * [크립토노트\(CryptoNote\)](c0ac-c0dd-d65c-privacy/d06c-b9bd-d1a0-b178-d2b828-cryptonote.md)
 * [블로그 글 정리](ae00.md)
   * [The Triangle of Harm](ae00/the-triangle-of-harm.md)
-* [확장성 \| Scalability](d655-c7a5-c131-scalability.md)
 * [솔리디티 \| Solidity](c194-b9ac-b514-d2f0-solidity.md)
 
