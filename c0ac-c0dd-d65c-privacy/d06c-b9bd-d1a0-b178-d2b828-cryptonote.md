@@ -21,13 +21,19 @@
 4. 철수는 거래를 전송한다.
 5. 영희는 모든 거래를   
 
-
-
-
-
 #### 일회성 링 시그니처\(One-time Ring Signatures\)
 
 ### Reference
 
 [https://cryptonote.org/](https://cryptonote.org/)
+
+
+
+EDCSA
+
+CryptoNote
+
+Confidentail Transactions
+
+Monero
 
