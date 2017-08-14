@@ -16,8 +16,9 @@
 #### 연결 불가능한 결제\(Unlinkable Payments\)
 
 1. 철수가 영희에게 지불을 하는 경우를 가정하자. 영희는 자신의 표준주소\(standard address\)를 공개하고 철수는 해당 주소를 통해 영희의 공개키 \(A, B\)를 확보한다.
-2. 영희는 무작위\(random\)로 $$r ∈ [1,l−1]$$을 생성한 후 $$P = Hs(rA)G+B$$를 통해 일회성 공개키\(one-time public key\)를 계산한다.
-3. 
+2. 영희는 무작위\(random\)로 $$r ∈ [1,l−1]$$을 생성한 후 일회성 공개키\(one-time public key\) $$P = H_s(rA)G+B$$를 계산한다.
+3. 철수는 P를 목표키\(destination key\)로 사용하여 \([디피 헬만 키 교환](https://ko.wikipedia.org/wiki/%EB%94%94%ED%94%BC-%ED%97%AC%EB%A7%8C_%ED%82%A4_%EA%B5%90%ED%99%98)의 일부로서\) $$R = rG$$를 거래에 포함시킨다. 
+
 #### 일회성 링 시그니처\(One-time Ring Signatures\)
 
 ### Reference
