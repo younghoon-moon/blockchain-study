@@ -15,7 +15,7 @@
 
 #### 연결 불가능한 결제\(Unlinkable Payments\)
 
-철수가 영희에게 지불을 한다. 영희는 자신의 표준주소\(standard address\)를 공개하고 철수는 해당 주소를 통해 영희의 공개키 {A, B} \(A, B\)
+철수가 영희에게 지불을 한다. 영희는 자신의 표준주소\(standard address\)를 공개하고 철수는 해당 주소를 통해 영희의 공개키 \(A, B\) A\_1 
 
 #### 일회성 링 시그니처\(One-time Ring Signatures\)
 
