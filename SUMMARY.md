@@ -6,6 +6,7 @@
   * [블룸필터\(Bloom Filter\)](be44-d2b8-cf54-c778-ae30-bcf8-bitcoin-basics/be14-b8f8-d544-d13028-bloom-filter.md)
   * [세그윗\(SegWit: Segregated Witness\)](be44-d2b8-cf54-c778-ae30-bcf8-bitcoin-basics/c138-adf8-c71728-segwit-segregated-witness.md)
   * [이기적 채굴\(Selfish Mining\)](be44-d2b8-cf54-c778-ae30-bcf8-bitcoin-basics/c774-ae30-c801-cc44-ad7428-selfish-mining.md)
+* [이더리움 기본 \| Ethereum Basics](c774-b354-b9ac-c6c0-ae30-bcf8-ethereum-basics.md)
 * [하드포크\(Hard Fork\)와 소프트포크\(Soft Fork\)](d558-b4dc-d3ec-d06c28-hard-fork-c640-c18c-d504-d2b8-d3ec-d06c28-soft-fork.md)
 * [암호경제학\(Cryptoeconomics\)](c554-d638-acbd-c81c-d55928-cryptoeconomics.md)
 * [합의 알고리즘 \| Consensus Algorithms](d569-c758-c54c-ace0-b9ac-c998-consensus-algorithms.md)
@@ -21,5 +22,5 @@
   * [크립토노트\(CryptoNote\)](c0ac-c0dd-d65c-privacy/d06c-b9bd-d1a0-b178-d2b828-cryptonote.md)
 * [블로그 글 정리](ae00.md)
   * [The Triangle of Harm](ae00/the-triangle-of-harm.md)
-* [솔리디티 \| Solidity](c194-b9ac-b514-d2f0-solidity.md)
+* 이더리움 기본 \| Ethereum Basics
 
